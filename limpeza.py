@@ -207,9 +207,16 @@ def enable_network_adapters():
             if "Wireless" in adapter.Name or "Ethernet" in adapter.Name:
                 adapter.Enable()  # Enable the adapter
         print(f"{adapter.Name} habilitado com sucesso.")
+        print("")
+        print("Pressione ENTER para voltar ao menu.")
+        input("")
         
     except Exception as e:
         print(f"Um erro ocorreu: {str(e)}")
+        print("")
+        print("Este erro ocorre em função do módulo WMI. Verifique em Adaptadores de Rede para ver Ethernet e Wi-Fi habilitados.")
+        print("Pressione ENTER para voltar ao menu.")
+        input("")
 
 #Check whether ethernet and Wi-Fi adapters are off and turns them back on in auto mode
 def enable_network_adapters_auto():
@@ -249,7 +256,7 @@ def check_and_restart_spooler():
         print(f"Cógido do erro: {e}")
         print("")
         print("-"*60)
-        print("Abra um chamado para FIELD SUPPORT PRINTERS LATAM")
+        print("Abra um chamado para FIELD SUPPORT PRINTERS LATAM pedindo verificação do bug de spooler.")
         print("Pressione ENTER para voltar ao menu")
         input("")
 
